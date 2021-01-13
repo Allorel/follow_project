@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Follow project!{% endblock %}
+
+{% block body %}
+
+    <h1>{{ pluralizer ( pins | length  ,'Pin' ,'Pins' ) }}</h1>
+   
+{% for pin in pins %}
+     <article>
+         <h2> {{ pin.title}} </h2>
+         <p> {{ pin.description}} </p>
+     </article>
+
+{% endfor %}
+    
+
+{% endblock %}
