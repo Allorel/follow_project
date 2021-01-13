@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Pin;
 use App\Repository\PinRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,9 +16,9 @@ class PinsController extends AbstractController
      */
     public function index(PinRepository $pinRepository) :Response
     {
-        $pins = $pinRepository->findAll();
-      
-       return $this->render('pins/index.html.twig' , compact('pins'));
+        $pins = $pinRepository->findby(['createAt' => 'DESC' ]);
+
+        return $this->render('pins/index.html.twig' , compact('pins'));
     }
 
     /**
@@ -25,6 +26,6 @@ class PinsController extends AbstractController
      */
     public function show (Pin $pin ) : Response
     {
-       return $this->render('pins/show.html.twig',compact('pin'));
+        return $this->render('pins/show.html.twig',compact('pin'));
     }
 }
