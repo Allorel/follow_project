@@ -6,10 +6,6 @@
 
     <h1>Edit  project # {{ pin.id }}</h1>
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-
-    <input type="submit" value="Update project user"  >
-    {{ form_end(form) }}
+    {{ include ('pins/_form.html.twig' , {'submitButtonText' : 'Edit project'} ) }}
 
 {% endblock %}
