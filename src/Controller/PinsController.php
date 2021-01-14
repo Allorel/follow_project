@@ -4,6 +4,7 @@ namespace App\Controller;
 
 
 use App\Entity\Pin;
+use App\Form\PinType;
 use App\Repository\PinRepository;
 use Doctrine\DBAL\Types\TextType;
 use Doctrine\ORM\EntityManagerInterface;
@@ -15,7 +16,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PinsController extends AbstractController
-{ 
+{
     /**
      * @Route("/", name="app_home" , methods="GET")
      */
@@ -33,11 +34,9 @@ class PinsController extends AbstractController
     public function create(Request $request , EntityManagerInterface $em): Response
     {
         $pin = new Pin;
-        $form =$this->createFormBuilder($pin)
-        ->add('title' )
-        ->add('description', TextareaType::class)
-        ->getForm()
-        ;
+        $form =$this->createForm(PinType::class, $pin);
+
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
@@ -62,15 +61,14 @@ class PinsController extends AbstractController
     }
 
     /**
-     * @Route("/pins/{id<[0-9]+>}/edit", name="app_edit" , methods="GET|POST")
+     * @Route("/pins/{id<[0-9]+>}/edit", name="app_edit" , methods="GET|PUT")
      */
     public function edit(Request $request , EntityManagerInterface $em ,Pin $pin): Response
     {
-        $form =$this->createFormBuilder($pin)
-            ->add('title' )
-            ->add('description', TextareaType::class)
-            ->getForm()
-        ;
+        $form =$this->createForm(PinType::class, $pin ,[
+            'method' =>'PUT'
+        ]);
+
 
         $form->handleRequest($request);
 
