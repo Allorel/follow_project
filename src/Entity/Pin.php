@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Entity\Traits\Timestampable;
 use App\Repository\PinRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -25,11 +26,15 @@ class Pin
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Ce champs ne peux pas rester vide")
+     * @Assert\Length(min=5 , minMessage =" Le titre doit contenir au moins 05 caractères")
      */
     private $title;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Une description de votre projet est necessaire")
+     * @Assert\Length(min=10 , minMessage ="Votre description doit contenir au moins 10 caractères")
      */
     private $description;
 
