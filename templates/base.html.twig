@@ -5,7 +5,26 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
+
+        <style>
+            .alert{
+                padding: 10px;
+                color: white;
+                text-align: center;
+            }
+            .alert-success {
+                background: green;
+            }
+            .alert-error {
+                background: red;
+            }
+            .alert-info {
+                background: darkslategrey;
+            }
+        </style>
     <body>
+{{ include ('pins/_flash.html.twig') }}
+
         <nav>
 
             <ul>
