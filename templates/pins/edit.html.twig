@@ -4,8 +4,18 @@
 
 {% block body %}
 
-    <h1>Edit  project # {{ pin.id }}</h1>
+    <div class="row">
 
-    {{ include ('pins/_form.html.twig' , {'submitButtonText' : 'Edit project'} ) }}
+      <div class="col-md-6 mx-auto" >
+
+           <h1>Edit  project # {{ pin.id }}</h1>
+
+          {{ include ('pins/_form.html.twig' , {'submitButtonText' : 'Edit project'} ) }}
+      </div>
+
+
+    </div>
+
+
 
 {% endblock %}

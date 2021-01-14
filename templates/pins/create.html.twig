@@ -4,9 +4,20 @@
 
 {% block body %}
 
-    <h1>Submit project</h1>
+    <div class="row">
 
-    {{ include ('pins/_form.html.twig' , {'submitButtonText' : 'Create project'} ) }}
+       <div class="col-md-6 mx-auto" >
+
+           <h1>Submit project</h1>
+
+           {{ include ('pins/_form.html.twig' , {'submitButtonText' : 'Create project'} ) }}
+
+
+       </div>
+
+
+    </div>
+
 
 
 {% endblock %}
