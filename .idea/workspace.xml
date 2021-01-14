@@ -11,10 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1e42e30-995b-4ae2-add4-207c0e7c1499" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/pins/_form.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bundles/TwigBundle/Exception/error404.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pins/create.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/create.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pins/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/edit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,7 @@
       <updated>1610507037842</updated>
       <workItem from="1610507039102" duration="12944000" />
       <workItem from="1610550339773" duration="41000" />
-      <workItem from="1610553640474" duration="31345000" />
+      <workItem from="1610553640474" duration="32384000" />
     </task>
     <servers />
   </component>
