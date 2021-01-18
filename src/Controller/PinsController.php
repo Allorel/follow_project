@@ -6,6 +6,7 @@ namespace App\Controller;
 use App\Entity\Pin;
 use App\Form\PinType;
 use App\Repository\PinRepository;
+use App\Repository\UserRepository;
 use Doctrine\DBAL\Types\TextType;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Container\ContainerInterface;
@@ -31,7 +32,7 @@ class PinsController extends AbstractController
     /**
      * @Route("/pins/create", name="app_create" , methods="GET|POST")
      */
-    public function create(Request $request , EntityManagerInterface $em): Response
+    public function create(Request $request , EntityManagerInterface $em ,UserRepository $userRepo): Response
     {
         $pin = new Pin;
         $form =$this->createForm(PinType::class, $pin);
@@ -40,6 +41,8 @@ class PinsController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()){
+            $janeDoe = $userRepo ->findOneBy(['email' => 'jane@doe.ru']) ;
+            $pin->setUser( $janeDoe);
             $em->persist($pin);
             $em->flush();
             $this->addFlash('success', 'Dépôt de projet réussi !');
