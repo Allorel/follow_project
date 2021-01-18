@@ -21,8 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="be4eff64-1905-41ec-af12-16a61413a18f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pins/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pins/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pins/capture-6004be4474486487300594.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pins/capture-6004c05c7d635533263113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pins/capture-6004c11a8e660187315245.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pins/capture-6004c1c15afe8395441360.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/pins/capture-6004ce82523b9992198635.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +174,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610917865145</updated>
-      <workItem from="1610917867063" duration="11198000" />
+      <workItem from="1610917867063" duration="14519000" />
     </task>
     <servers />
   </component>
@@ -189,6 +193,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610934236303">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1610934236303" />
     <state x="347" y="73" width="587" height="534" key="find.popup" timestamp="1610922303602">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
