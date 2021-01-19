@@ -25,8 +25,8 @@
                     </p>
 
                         <div class="pt-3">
-                            <a href="{{ path('app_edit',  {'id': pin.id}) }}" class="btn btn-light">Edit</a>
-                            <a href="#" onclick="event.preventDefault(); confirm('Are you sure?') && document.getElementById('js-pin-delete-form').submit();" class="btn btn-light">Delete</a>
+                            <a href="{{ path('app_edit',  {'id': pin.id}) }}" class="btn btn-success">Edit</a>
+                            <a href="#" onclick="event.preventDefault(); confirm('Are you sure?') && document.getElementById('js-pin-delete-form').submit();" class="btn btn-danger"> &times; Delete</a>
 
                             <form id="js-pin-delete-form" action="{{ path('app_delete', {id: pin.id}) }}" method="post" style="display: none;">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token('pin_deletion_' ~ pin.id) }}">
