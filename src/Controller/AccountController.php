@@ -48,4 +48,39 @@ class AccountController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+
+
+    /**
+     * @Route("/account/change-password", name="app_account_change_password")
+     */
+    public function changePassword(Request $request, EntityManagerInterface $em, UserPasswordEncoderInterface $passwordEncoder): Response
+    {
+        $user = $this->getUser();
+        $form = $this->createForm(ChangePasswordFormType::class, null, [
+            'current_password_is_required' => true,
+            'method' => 'PATCH'
+        ]);
+
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user->setPassword(
+                $passwordEncoder->encodePassword($user, $form['newPassword']->getData())
+            );
+
+            $em->flush();
+
+            $this->addFlash('success', 'Password updated successfully!');
+
+            return $this->redirectToRoute('app_account');
+        }
+
+        return $this->render('account/change_password.html.twig', [
+            'form' => $form->createView()
+
+        ]);
+    }
+
 }
