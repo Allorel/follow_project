@@ -20,8 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be4eff64-1905-41ec-af12-16a61413a18f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/follow_poject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/follow_poject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PinsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PinsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pins/_flash.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/_flash.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pins/_nav.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pins/_nav.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,6 +158,7 @@
       <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1nDHhnaAuhOCHfcjrvqF9Z6xJkg" />
@@ -169,7 +179,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610917865145</updated>
-      <workItem from="1610917867063" duration="36209000" />
+      <workItem from="1610917867063" duration="45998000" />
     </task>
     <servers />
   </component>
@@ -192,10 +202,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="96" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.680@0.0.1280.680" timestamp="1610934236303" />
-    <state x="347" y="73" width="587" height="534" key="find.popup" timestamp="1610987107327">
+    <state x="347" y="73" width="587" height="534" key="find.popup" timestamp="1611024013214">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="347" y="73" width="587" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1610987107327" />
+    <state x="347" y="73" width="587" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1611024013214" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
