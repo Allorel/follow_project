@@ -2,10 +2,16 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+use App\Form\UserFormType;
+use App\Form\ChangePasswordFormType;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class AccountController extends AbstractController
 {
     /**
@@ -14,5 +20,32 @@ class AccountController extends AbstractController
     public function show(): Response
     {
         return $this->render('account/show.html.twig');
+    }
+
+
+    /**
+     * @Route("/account/edit", name="app_account_edit")
+     */
+    public function edit(Request $request, EntityManagerInterface $em): Response
+    {
+        $user = $this->getUser();
+
+        $form = $this->createForm(UserFormType::class, $user, [
+            'method' => 'PATCH'
+        ]);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->flush();
+
+            $this->addFlash('success', 'Account updated successfully!');
+
+            return $this->redirectToRoute('app_account');
+        }
+
+        return $this->render('account/edit.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
 }
